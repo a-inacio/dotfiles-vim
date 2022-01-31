@@ -1,0 +1,33 @@
+source core.vim
+
+" -----------------------------------------------------------
+" Specific to IdeaVim!
+" -----------------------------------------------------------
+set commentary
+set surround
+set easymotion
+
+nmap <leader>f <Plug>(easymotion-f)
+nmap <leader>F <Plug>(easymotion-F)
+
+" TODO
+map <leader>sv :source ~/.ideavimrc<CR>
+map <leader>ev :e ~/.ideavimrc<CR>
+
+" hacks due to IdeaVim bugs
+
+" surround selection with
+" TODO not working on IdeaVim (not returning to normal mode)
+vnoremap " <esc>`>a"<esc>`<i"
+vnoremap ' <esc>`>a'<esc>`<i'
+
+" terminal
+nnoremap <leader>tt :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>to :action Terminal.OpenInTerminal<CR>
+
+" TODO revert back undo breakpoints... (not working on IdeaVim)
+inoremap , ,
+inoremap ; ;
+inoremap . .
+inoremap ! !
+inoremap ? ?
