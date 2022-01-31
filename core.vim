@@ -1,4 +1,4 @@
-  nnoremap <leader>a ggVG
+nnoremap <leader>a ggVG
 
   " clear highlight
 nnoremap <leader><leader> :noh<CR>
@@ -6,11 +6,11 @@ nnoremap <leader><leader> :noh<CR>
 " copy from / to system clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
-nnoremap <leader>Y gg"+yG
 nnoremap <leader>p "+p
+nnoremap <leader>Y gg"+yG
 
-" prevent the main register to be changed when pasting over selected test
 xnoremap <leader>r "_dP
+" prevent the main register to be changed when pasting over selected test
 
 " dot command over visual selection
 vnoremap . :'<'>normal.<CR>gv
@@ -20,14 +20,19 @@ vnoremap . :'<'>normal.<CR>gv
 " https://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim
 
 nnoremap <a-down> :m .+1<CR>==
+nnoremap <esc><down> :m .+1<CR>==
 nnoremap <a-up> :m .-2<CR>==
+nnoremap <esc><up> :m .-2<CR>==
 
 inoremap <a-down> <Esc>:m .+1<CR>==gi
+inoremap <esc><down> <Esc>:m .+1<CR>==gi
 inoremap <a-up> <Esc>:m .-2<CR>==gi
+inoremap <esc><up> <Esc>:m .-2<CR>==gi
 
+vnoremap <esc><down> :m '>+1<CR>gv=gv
 vnoremap <a-down> :m '>+1<CR>gv=gv
 vnoremap <a-up> :m '<-2<CR>gv=gv
-
+vnoremap <esc><up> :m '<-2<CR>gv=gv
 
 " make Vim yank Y consistent with C and D
 nnoremap Y y$
@@ -46,11 +51,12 @@ inoremap . .<C-g>u
 inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
 
-" change "next" word
 nnoremap cn *``cgn
+" change "next" word
 nnoremap cN #``cgN
 
 " display line numbers
+
 set nu
 set rnu
 
