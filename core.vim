@@ -30,12 +30,12 @@ vnoremap <a-up> :m '<-2<CR>gv=gv
 "    So the woraround for now is also map <esc><...> ...but there are some
 "    caviates here too... pressing <esc> and using the arrow keys have the
 "    nasty side effect of also moving the line around
-nnoremap <esc><down> :m .+1<CR>==
-nnoremap <esc><up> :m .-2<CR>==
-inoremap <esc><down> <Esc>:m .+1<CR>==gi
-inoremap <esc><up> <Esc>:m .-2<CR>==gi
-vnoremap <esc><down> :m '>+1<CR>gv=gv
-vnoremap <esc><up> :m '<-2<CR>gv=gv
+" nnoremap <down> :m .+1<CR>==
+" nnoremap <up> :m .-2<CR>==
+" inoremap <up> <Esc>:m .-2<CR>==gi
+" inoremap <down> <Esc>:m .+1<CR>==gi
+" vnoremap <down> :m '>+1<CR>gv=gv
+" vnoremap <up> :m '<-2<CR>gv=gv
 
 " make Vim yank Y consistent with C and D
 nnoremap Y y$
