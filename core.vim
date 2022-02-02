@@ -16,22 +16,25 @@ xnoremap <leader>r "_dP
 vnoremap . :'<'>normal.<CR>gv
 
 " moving lines around
-" Mac OS needs some tweaking!
-" https://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim
-
 nnoremap <a-down> :m .+1<CR>==
-nnoremap <esc><down> :m .+1<CR>==
 nnoremap <a-up> :m .-2<CR>==
-nnoremap <esc><up> :m .-2<CR>==
-
 inoremap <a-down> <Esc>:m .+1<CR>==gi
-inoremap <esc><down> <Esc>:m .+1<CR>==gi
 inoremap <a-up> <Esc>:m .-2<CR>==gi
-inoremap <esc><up> <Esc>:m .-2<CR>==gi
-
-vnoremap <esc><down> :m '>+1<CR>gv=gv
 vnoremap <a-down> :m '>+1<CR>gv=gv
 vnoremap <a-up> :m '<-2<CR>gv=gv
+"    Mac OS needs some tweaking!
+"
+"    But this is not working that nice:
+"    https://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim
+" 
+"    So the woraround for now is also map <esc><...> ...but there are some
+"    caviates here too... pressing <esc> and using the arrow keys have the
+"    nasty side effect of also moving the line around
+nnoremap <esc><down> :m .+1<CR>==
+nnoremap <esc><up> :m .-2<CR>==
+inoremap <esc><down> <Esc>:m .+1<CR>==gi
+inoremap <esc><up> <Esc>:m .-2<CR>==gi
+vnoremap <esc><down> :m '>+1<CR>gv=gv
 vnoremap <esc><up> :m '<-2<CR>gv=gv
 
 " make Vim yank Y consistent with C and D
@@ -56,7 +59,6 @@ nnoremap cn *``cgn
 nnoremap cN #``cgN
 
 " display line numbers
-
 set nu
 set rnu
 
@@ -64,8 +66,8 @@ set rnu
 vnoremap " <esc>`>a"<esc>`<i"<esc>
 vnoremap ' <esc>`>a'<esc>`<i'<esc>
 
-"set noerrorbells
-"set belloff=all
+" set noerrorbells
+" set belloff=all
 set visualbell
 set incsearch
 
