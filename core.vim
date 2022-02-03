@@ -1,3 +1,4 @@
+" select all
 nnoremap <leader>a ggVG
 
   " clear highlight
@@ -16,12 +17,12 @@ xnoremap <leader>r "_dP
 vnoremap . :'<'>normal.<CR>gv
 
 " moving lines around
-nnoremap <a-down> :m .+1<CR>==
-nnoremap <a-up> :m .-2<CR>==
-inoremap <a-down> <Esc>:m .+1<CR>==gi
-inoremap <a-up> <Esc>:m .-2<CR>==gi
-vnoremap <a-down> :m '>+1<CR>gv=gv
-vnoremap <a-up> :m '<-2<CR>gv=gv
+nnoremap <A-down> :m .+1<CR>==
+nnoremap <A-up> :m .-2<CR>==
+inoremap <A-down> <Esc>:m .+1<CR>==gi
+inoremap <A-up> <Esc>:m .-2<CR>==gi
+vnoremap <A-down> :m '>+1<CR>gv=gv
+vnoremap <A-up> :m '<-2<CR>gv=gv
 "    Mac OS needs some tweaking!
 "
 "    But this is not working that nice:
@@ -36,6 +37,8 @@ vnoremap <a-up> :m '<-2<CR>gv=gv
 " inoremap <down> <Esc>:m .+1<CR>==gi
 " vnoremap <down> :m '>+1<CR>gv=gv
 " vnoremap <up> :m '<-2<CR>gv=gv
+"    ... so ... better not to use this for now, also because it might not
+"    work everywhere... 🤬
 
 " make Vim yank Y consistent with C and D
 nnoremap Y y$
