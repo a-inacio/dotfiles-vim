@@ -2,7 +2,7 @@
 nnoremap <leader>a ggVG
 
   " clear highlight
-nnoremap <leader><leader> :noh<CR>
+nnoremap <C-l> :noh<CR>
 
 " copy from / to system clipboard
 nnoremap <leader>y "+y
