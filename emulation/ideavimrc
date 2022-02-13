@@ -1,4 +1,5 @@
-source core.vim
+" TODO remove hardcoded basepath
+source ~/.config/vim/base/core.vim
 
 " -----------------------------------------------------------
 " Specific to IdeaVim!
