@@ -19,12 +19,12 @@ vnoremap . :'<'>normal.<CR>gv
 " moving lines around
 " https://superuser.com/questions/1434741/vim-move-selection-up-down-with-ctrlshiftarrow
 " https://superuser.com/questions/401926/how-to-get-shiftarrows-and-ctrlarrows-working-in-vim-in-tmux/
-nnoremap <C-S-down> :m .+1<CR>==
-nnoremap <C-S-up> :m .-2<CR>==
-inoremap <C-S-down> <Esc>:m .+1<CR>==gi
-inoremap <C-S-up> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-down> :m '>+1<CR>gv=gv
-vnoremap <C-S-up> :m '<-2<CR>gv=gv
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " make Vim yank Y consistent with C and D
 nnoremap Y y$
